@@ -20,6 +20,8 @@ sudo cp scripts/* /opt/samsung-galaxybook-extras/
 
 echo "Adding sudoers configuration..."
 sudo cp resources/sudoers /etc/sudoers.d/samsung-galaxybook-extras
+sudo chown root:root /etc/sudoers.d/samsung-galaxybook-extras
+sudo chmod 0440 /etc/sudoers.d/samsung-galaxybook-extras
 
 echo "Adding hwdb configuration for keyboard keys..."
 sudo cp resources/61-keyboard-samsung-galaxybook.hwdb /etc/udev/hwdb.d/
